@@ -116,7 +116,7 @@ namespace Ogxd.ProjectCurator
 
         void RenderOtherAsset(string guid) {
             var path = AssetDatabase.GUIDToAssetPath(guid);
-            if (GUILayout.Button(new GUIContent(Path.GetFileName(path), path), ItemStyle)) {
+            if (GUILayout.Button(new GUIContent(path, path), ItemStyle)) {
                 UnityEditor.Selection.activeObject = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);
             }
             var rect = GUILayoutUtility.GetLastRect();
